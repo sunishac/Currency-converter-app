@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.chala.currencyconvertor.MainActivity">
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/inputText"
+        android:text="@string/input_amount_label"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/hrec"/>
+
+    <TextView
+        android:text="@string/convertto_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textCovertto"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/group1"
+        android:layout_alignLeft="@+id/buttonConvert"
+        android:layout_alignStart="@+id/buttonConvert"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textCovertto"
+        android:layout_alignRight="@+id/textCovertto"
+        android:layout_alignEnd="@+id/textCovertto"
+        android:layout_margin="10dp"
+        android:id="@+id/group2">
+
+        <RadioButton
+            android:text="@string/usd_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/usdButton"
+            android:layout_below="@+id/gbpButton"
+            android:layout_alignLeft="@+id/gbpButton"
+            android:layout_alignStart="@+id/gbpButton"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="@string/gbp_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:id="@+id/gbpButton"
+            android:layout_below="@+id/textCovertto"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+    <Button
+        android:text="@string/convert_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:id="@+id/buttonConvert"
+        android:layout_below="@+id/group2"
+        android:layout_alignLeft="@+id/buttonClear"
+        android:layout_alignStart="@+id/buttonClear" />
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/group1"
+        android:layout_below="@+id/inputText"
+        android:layout_alignLeft="@+id/textCovertto"
+        android:layout_alignStart="@+id/textCovertto">
+
+        <RadioButton
+            android:text="@string/aud_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/audButton"
+            android:layout_below="@+id/inputText"
+            android:layout_alignLeft="@+id/inputText"
+            android:layout_alignStart="@+id/inputText"
+            android:layout_weight="1" />
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cadButton"
+            android:layout_below="@+id/audButton"
+            android:layout_alignLeft="@+id/audButton"
+            android:layout_alignStart="@+id/audButton"
+            android:text="@string/cad_radio"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/inrButton"
+            android:layout_below="@+id/cadButton"
+            android:layout_alignLeft="@+id/cadButton"
+            android:layout_alignStart="@+id/cadButton"
+            android:text="@string/inr_radio"
+            android:layout_weight="1" />
+
+    </RadioGroup>
+
+    <TextView
+        android:text="@string/result_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/resultText"
+        android:background="@drawable/rec"
+        android:layout_below="@+id/buttonConvert"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_alignLeft="@+id/inputText"
+        android:layout_alignStart="@+id/inputText"
+        android:layout_alignRight="@+id/inputText"
+        android:layout_alignEnd="@+id/inputText" />
+
+
+    <Button
+        android:text="@string/clear_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonClear"
+        android:onClick="clearClicked"
+        android:layout_margin="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/resultText" />
+
+
+
+</RelativeLayout>
